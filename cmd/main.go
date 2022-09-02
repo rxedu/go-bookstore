@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/makenew/gomodule/v1/pkg"
+	"github.com/rxedu/go-bookstore/v1/pkg"
 )
 
 func main() {
