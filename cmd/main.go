@@ -9,6 +9,7 @@ import (
 
 func main() {
 	s := pkg.NewServer()
+	pkg.InitDB()
 	fmt.Printf("Running on http://localhost:8000")
 	log.Fatal(http.ListenAndServe(":8000", s))
 }
