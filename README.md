@@ -2,11 +2,9 @@
 
 [![GitHub Actions](https://github.com/rxedu/go-bookstore/workflows/main/badge.svg)](https://github.com/rxedu/go-bookstore/actions)
 
-Books
-
 ## Description
 
-TODO
+[Learn Go Programming by Building 11 Projects by freeCodeCamp.](https://www.freecodecamp.org/news/learn-go-by-building-11-projects/)
 
 ## Installation
 
