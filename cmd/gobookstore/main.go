@@ -5,12 +5,12 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/rxedu/go-bookstore/v1/pkg"
+	"github.com/rxedu/go-bookstore"
 )
 
 func main() {
-	s := pkg.NewServer()
-	pkg.InitDB()
+	s := gobookstore.NewServer()
+	gobookstore.InitDB()
 	fmt.Printf("Running on http://localhost:8000")
 	log.Fatal(http.ListenAndServe(":8000", s))
 }

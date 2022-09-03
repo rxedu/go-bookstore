@@ -6,8 +6,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/rxedu/go-bookstore/v1/internal/marshal"
-	"github.com/rxedu/go-bookstore/v1/internal/models"
+	"github.com/rxedu/go-bookstore/internal/marshal"
+	"github.com/rxedu/go-bookstore/internal/models"
 )
 
 func CreateBook(w http.ResponseWriter, r *http.Request) {

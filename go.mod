@@ -1,4 +1,4 @@
-module github.com/rxedu/go-bookstore/v1
+module github.com/rxedu/go-bookstore
 
 go 1.19
 
