@@ -43,3 +43,18 @@ func DeleteBook(ID int64) Book {
 	db.Where("ID=?", ID).Delete(book)
 	return book
 }
+
+func UpdateBook(ID int64, bookUpdate *Book) Book {
+	book, _ := GetBookByID(ID)
+	if bookUpdate.Name != "" {
+		book.Name = bookUpdate.Name
+	}
+	if bookUpdate.Author != "" {
+		book.Author = bookUpdate.Author
+	}
+	if bookUpdate.Publication != "" {
+		book.Publication = bookUpdate.Publication
+	}
+	db.Save(&book)
+	return book
+}

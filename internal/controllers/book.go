@@ -32,9 +32,29 @@ func GetBookByID(w http.ResponseWriter, r *http.Request) {
 	jsonRes(w, book, http.StatusOK)
 }
 
-func UpdateBook(w http.ResponseWriter, r *http.Request) {}
+func UpdateBook(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	bookId := params["bookId"]
+	ID, ok := marshal.ParseID(bookId)
+	if !ok {
+		return
+	}
+	bookUpdate := &models.Book{}
+	marshal.ParseBody(r, bookUpdate)
+	book := models.UpdateBook(ID, bookUpdate)
+	jsonRes(w, book, http.StatusOK)
+}
 
-func DeleteBook(w http.ResponseWriter, r *http.Request) {}
+func DeleteBook(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	bookId := params["bookId"]
+	ID, ok := marshal.ParseID(bookId)
+	if !ok {
+		return
+	}
+	book := models.DeleteBook(ID)
+	jsonRes(w, book, http.StatusOK)
+}
 
 func jsonRes(w http.ResponseWriter, data interface{}, code int) {
 	res, err := json.Marshal(data)
