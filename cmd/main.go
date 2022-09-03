@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/rxedu/go-bookstore/v1/pkg"
 	"log"
 	"net/http"
+
+	"github.com/rxedu/go-bookstore/v1/pkg"
 )
 
 func main() {

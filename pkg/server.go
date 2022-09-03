@@ -2,6 +2,7 @@ package pkg
 
 import (
 	"github.com/gorilla/mux"
+
 	"github.com/rxedu/go-bookstore/v1/internal/models"
 	"github.com/rxedu/go-bookstore/v1/internal/routes"
 	"github.com/rxedu/go-bookstore/v1/pkg/config"
